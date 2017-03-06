@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>El Capitán v.0.0.1</title>
+	
 </head>
 <body>
 	<center><img src="assets\img\laboratoria.jpg" alt="" align="center"></center>
@@ -17,13 +18,70 @@
 	<input type="button" value="Sprint3" onclick="mostarOcultar('text3')">
 
 	<br/>
-	<div id="text1"></div>
-	<div id="text2"></div>
-	<div id="text3">Todavía no empieza el sprint 3!</div>
+	<div id="text1" >
+		<h3>Sprint 1: Introducción a Javasript</h3>
+		<ol><li>Fundamentos de Programación</li>
+		<li>Funciones</li>
+		<li>Arreglos</li>
+		<li>Objetos</li>
+		</ol>
+	</div>
+	<div id="text2" >
+		<h3>Sprint 2: Introducción al desarrollo web y construcción de páginas web</h3>
+		<ol><li>Ciclo de vida del desarrollo web y arquitectura básica cliente/servidor / Configuración del ambiente del trabajo e introducción a git.</li>
+		<li>HTML y Javascript en el navegador</li>
+		<li>Manejo de comandos básicos de git en la terminal</li>
+		<li>Pruebas unitarias</li>
+		<li>Git / Resolución de conflictos / Branching model</li>
+		<li>DOM</li></ol>
+	</div>
+	<div id="text3" >
+	<h3>Sprint 3:</h3>
+	Todavía no empieza el sprint 3!</div>
 
+	<hr />
+
+	<div id="cuestionario" onsubmit="resultadoQuiz();return false;">
+		<form method="get" action="" name=pregunta1>
+		<b>¿Cuál es el comando para iniciar un repositorio desde la consola?</b>
+		<br />
+		<input name="quiz1" type="radio" id="p1" />git init .
+		<br />
+		<input name="quiz1" type="radio" id="p2" />git init
+		<br />
+		<input name="quiz1" type="radio" id="p3" />git init add
+		</form><br>
+
+		<form method="get" action="" name=pregunta2>
+		<b>¿Cuál es la finalidad de hacer una prueba unitaria?</b>
+		<br />
+		<input name="quiz2" type="radio" id="p4" />Comprobar que el código funciona correctamente
+		<br />
+		<input name="quiz2" type="radio" id="p5" />Darle valores a los parámetros de dichas funciones
+		<br />
+		<input name="quiz2" type="radio" id="p6" />No tiene ningún fin
+		</form><br>
+
+		<form method="get" action="" name=pregunta3>
+		<b>¿Qué significa DOM?</b>
+		<br />
+		<input name="quiz3" type="radio" id="p7" />Dual Object Model
+		<br />
+		<input name="quiz3" type="radio" id="p8" />Document Object Model
+		<br />
+		<input name="quiz3" type="radio" id="p9" />Document Obsolet Model
+		</form><br>
+		
+		<button type="submit" id="enviar">ENVIAR</button>
+		
+	</div>
 
 	
-	<script type='text/javascript' src='js/app.js'></script>
+
+
+	<link rel="stylesheet" href="assets/css/registro.css">
+	<script type='text/javascript' src='assets/js/app.js'></script>
+
 	
 </body>
 </html>
