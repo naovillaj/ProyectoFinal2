@@ -3,25 +3,17 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<link rel="stylesheet" href="assets/css/registro.css">
 	<title>Estudiantes Laboratoria</title>
 </head>
 <body>
 
+	<div id="coders"></div>
+	<a href="index.html" target="_self"> 
+	<center><br><br><input type="button" name="boton" value="Regresar al inicio" style="" ="center" /> </a> </center>
+	
+</body>
 
-	   <table  cellspacing="100px" align="center" border= "1px solid black;"> 
-           <tr><td bgcolor="#FFBF00" padding="5px;">Nombre : Meche <br> Apellido : Zubieta <br>  Promocion : 1era. promoción <br> Estado : Trabajando </td>
-               <td bgcolor="#FFBF00">Nombre : Arabela <br> Apellido : Rojas <br>  Promocion : 2da. promoción <br> Estado : Trabajando </td>
-               <td bgcolor="#FFBF00">Nombre : María <br> Apellido : Rosán <br>  Promocion : 2da. promoción <br> Estado : Trabajando </td>
-           	   <td bgcolor="#FFBF00">Nombre : Guadalupe <br> Apellido : Racio <br>  Promocion : 3era. promoción <br> Estado : Trabajando </td><tr>
-           <tr><td bgcolor="#FFBF00">Nombre : Sara <br> Apellido : Casa <br>  Promocion : 3era. promoción <br> Estado : Trabajando </td>
-               <td bgcolor="#FFBF00">Nombre : Daniella <br> Apellido : Durán <br>  Promocion : 4ta. promoción <br> Estado : Trabajando </td>
-           	   <td bgcolor="#FFBF00">Nombre : Michelle <br> Apellido : Seguil <br>  Promocion : 5ta. promoción <br> Estado : Trabajando </td>
-               <td bgcolor="#FFBF00">Nombre : Diana <br> Apellido : Navarro <br>  Promocion : 5ta. promoción <br> Estado : Trabajando </td></tr>
-               
-
-
-
-        </table><br>
 
 	<script type="text/javascript">
 
@@ -37,16 +29,22 @@
 			 { nombre : "Diana", apellido : "Navarro",  promocion : "5ta. promoción", estado : "Trabajando" } ];
 
 
-			 
+		var imprimirC="";
+
+
+		coders.forEach(function(e){
+
+			imprimirC += "<div class=div-coder><p>"+"Nombre: " + e.nombre+"</p><p>"+ "Apellido: " + e.apellido+"</p><p>"+ "Promoción: " + e.promocion+"</p><p>"+"Estado: " + e.estado+"</p></div>"
+		})
+
+
+		document.getElementById("coders").innerHTML = imprimirC;
 
 	</script>
 
 
 
-	<a href="file:///C:/Users/Administrador/Documents/Laboratoria-Naomi/Repositorio/ProyectoFinal2/index.html#" target="_self"> 
-	<center><input type="button" name="boton" value="Regresar al inicio" style="" ="center" /> </a> </center>
-	
-</body>
+
 </html>
 
 

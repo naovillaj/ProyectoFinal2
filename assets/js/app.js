@@ -1,58 +1,63 @@
 
-/*var mo = function(){
-	var t1 = document.getElementById("text1");
-	var t2 = document.getElementById("text2");
-	var t3 = document.getElementById("text3");
+var mostarOcultar = function(divtexte) {
+	var divtext = document.getElementById(divtexte);
+	
+	if(divtext.id == "text1"){
+		text1.style.display = "block";
+		text2.style.display = "none";
+		text3.style.display = "none";
+		
+	} else if(divtext.id == "text2"){
+		text2.style.display = "block";
+		text1.style.display = "none";
+		text3.style.display = "none";
+		
 
-	if(t1.style.display == "none"){
-		t1.style.display = "block";
-		t2.style.display = "none";
-		t3.style.display = "none";
-		//return false;
-
-	} else if(t2.style.display == "none"){
-		t2.style.display = "block";
-		t1.style.display = "none";
-		t3.style.display = "none";
-		//return false;
-
-	} else if(text3.style.display == "none"){
-		t3.style.display = "block";
-		t1.style.display = "none";
-		t2.style.display = "none";
-		//return false;
+	} else if(divtext.id == "text3"){
+		text3.style.display = "block";
+		text1.style.display = "none";
+		text2.style.display = "none";
 
 	} 
 	
 
 
-}*/
-
-
-
-var mostarOcultar = function(divtexte) {
-	var divtext = document.getElementById(divtexte);
-	if (divtext.style.display == "none" ) {
-		divtext.style.display = "block";
-	} 
-		else{
-		divtext.style.display = "none";
-	}
 }
 
 
-var resultadoQuiz = function(){
+function resultadoQuiz1(){
+
 	var contar = 0;
 
-	if(document.getElementById("p2").checked.value){
+	if(document.getElementById("p11").checked){
+		contar++; 
+	}
+
+	if (document.getElementById("p15").checked){
 		contar++;
-	}else if (document.getElementById("p4").checked.value){
-		contar++;
-	}else if (document.getElementById("p8").checked.value){
+	}
+	if (document.getElementById("p19").checked){
 		contar++;
 	} 
 
-	document.getElementById("cuestionario").innerHTML= "Tienes" + contar + "correctas";
+	document.getElementById("cuestionario").innerHTML= "Tienes " + contar + " correctas";
+	
+}
+
+ function resultadoQuiz2(){
+	var contar = 0;
+
+	if(document.getElementById("p2").checked){
+		contar++; 
+	}
+	if (document.getElementById("p4").checked){
+		contar++;
+	}
+	if (document.getElementById("p8").checked){
+		contar++;
+	} 
+
+	document.getElementById("cuestionario2").innerHTML= "Tienes " + contar + " correctas";
 	
 }
 

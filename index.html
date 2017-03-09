@@ -6,11 +6,12 @@
 	
 </head>
 <body>
-	<div class="dropdown float: right"  >Hola Maria
+	<div class="dropdown"> <label id="saludo"></label>
+
 	<button onclick="myFunction()" class="dropbtn">&#9776;</button>
 	<div id="myDropdown" class="dropdown-content">
-		<a href="file:///C:/Users/Administrador/Documents/Laboratoria-Naomi/Repositorio/ProyectoFinal2/link1.html">Perfil</a>
-		<a href="file:///C:/Users/Administrador/Documents/Laboratoria-Naomi/Repositorio/ProyectoFinal2/link2.html">Salir</a>
+		<a href="link1.html">Perfil</a>
+		<a href="link2.html">Salir</a>
 	</div>
 	</div>
 
@@ -35,6 +36,47 @@
 		<li>Arreglos</li>
 		<li>Objetos</li>
 		</ol>
+
+		<hr />
+
+		<div id="cuestionario" >
+		<form method="get" action="" name=pregunta1 onsubmit="resultadoQuiz1();return false;">
+		<b>Existen dos tipos de funciones</b>
+		<br />
+		<input name="quiz1" type="radio" id="p11" required/>Expresadas y declaradas
+		<br />
+		<input name="quiz1" type="radio" id="p12" required/>Explícitas y declaradas
+		<br />
+		<input name="quiz1" type="radio" id="p13" required/>Expresadas y derivadas
+		<br>
+
+		
+		<b>Elije una propiedad de los arreglos</b>
+		<br />
+		<input name="quiz2" type="radio" id="p14" required/>clear
+		<br />
+		<input name="quiz2" type="radio" id="p15" required/>pop
+		<br />
+		<input name="quiz2" type="radio" id="p16" required/>add
+		<br>
+
+		
+		<b>Un objeto tiene ______ y ______</b>
+		<br />
+		<input name="quiz3" type="radio" id="p17" required/>números y letras
+		<br />
+		<input name="quiz3" type="radio" id="p18" required/>partes y validaciones
+		<br />
+		<input name="quiz3" type="radio" id="p19" required/>propiedades y valores
+
+		<br><br>
+		<button type="submit" id="enviar1">ENVIAR</button>
+		</form>
+		
+		
+		
+		</div>
+
 	</div>
 	<div id="text2" >
 		<h3>Sprint 2: Introducción al desarrollo web y construcción de páginas web</h3>
@@ -44,55 +86,64 @@
 		<li>Pruebas unitarias</li>
 		<li>Git / Resolución de conflictos / Branching model</li>
 		<li>DOM</li></ol>
+
+		<hr />
+
+		<div id="cuestionario2" >
+		<form method="get" action="" name=pregunta2 onsubmit="resultadoQuiz2();return false;">
+		<b>¿Cuál es el comando para iniciar un repositorio desde la consola?</b>
+		<br />
+		<input name="quiz1" type="radio" id="p1" required/>git init .
+		<br />
+		<input name="quiz1" type="radio" id="p2" required/>git init
+		<br />
+		<input name="quiz1" type="radio" id="p3" required/>git init add
+		<br>
+
+		<b>¿Cuál es la finalidad de hacer una prueba unitaria?</b>
+		<br />
+		<input name="quiz2" type="radio" id="p4" required/>Comprobar que el código funciona correctamente
+		<br />
+		<input name="quiz2" type="radio" id="p5" required/>Darle valores a los parámetros de dichas funciones
+		<br />
+		<input name="quiz2" type="radio" id="p6" required/>No tiene ningún fin
+		<br>
+
+		<b>¿Qué significa DOM?</b>
+		<br />
+		<input name="quiz3" type="radio" id="p7" required/>Dual Object Model
+		<br />
+		<input name="quiz3" type="radio" id="p8" required/>Document Object Model
+		<br />
+		<input name="quiz3" type="radio" id="p9" required/>Document Obsolet Model
+		<br><br>
+		
+		<button id="enviar">ENVIAR</button>
+		</form>
+		
+		</div>
+
+
 	</div>
 	<div id="text3" >
 	<h3>Sprint 3:</h3>
 	Todavía no empieza el sprint 3!</div>
 
-	<hr />
-
-	<div id="cuestionario" onsubmit="resultadoQuiz();return false;">
-		<form method="get" action="" name=pregunta1>
-		<b>¿Cuál es el comando para iniciar un repositorio desde la consola?</b>
-		<br />
-		<input name="quiz1" type="radio" id="p1" />git init .
-		<br />
-		<input name="quiz1" type="radio" id="p2" />git init
-		<br />
-		<input name="quiz1" type="radio" id="p3" />git init add
-		</form><br>
-
-		<form method="get" action="" name=pregunta2>
-		<b>¿Cuál es la finalidad de hacer una prueba unitaria?</b>
-		<br />
-		<input name="quiz2" type="radio" id="p4" />Comprobar que el código funciona correctamente
-		<br />
-		<input name="quiz2" type="radio" id="p5" />Darle valores a los parámetros de dichas funciones
-		<br />
-		<input name="quiz2" type="radio" id="p6" />No tiene ningún fin
-		</form><br>
-
-		<form method="get" action="" name=pregunta3>
-		<b>¿Qué significa DOM?</b>
-		<br />
-		<input name="quiz3" type="radio" id="p7" />Dual Object Model
-		<br />
-		<input name="quiz3" type="radio" id="p8" />Document Object Model
-		<br />
-		<input name="quiz3" type="radio" id="p9" />Document Obsolet Model
-		</form><br>
-		
-		<button type="submit" id="enviar">ENVIAR</button>
-		
-	</div>
-
 	
-
-	
-
-
 	<link rel="stylesheet" href="assets/css/registro.css">
 	<script type='text/javascript' src='assets/js/app.js'></script>
+	<script type="text/javascript">
+		var nombre = prompt("¿Cuál es tu nombre? :");
+
+		while(nombre == ""){
+
+			nombre = prompt("Debes ingresar tu nombre!");
+		} 
+
+			document.getElementById("saludo").textContent = "Hola coder " + nombre.charAt(0).toUpperCase()+nombre.substring(1);
+		
+		
+	</script>
 
 	
 </body>
